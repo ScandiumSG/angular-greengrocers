@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { Item } from '../models/item';
+import { Item } from '../../models/item';
 import { DatafetchingService } from '../datafetching.service';
-import capitalizeFirstLetter from "../utils/stringUtils"
+import capitalizeFirstLetter from "../../utils/stringUtils"
 
 @Component({
-  selector: 'app-item-list',
-  templateUrl: './item-list.component.html',
-  styleUrls: ['./item-list.component.css']
+  selector: 'app-items',
+  templateUrl: './items.component.html',
+  styleUrls: ['./items.component.css']
 })
-export class ItemListComponent implements OnInit {
+export class ItemsComponent implements OnInit {
   items: Item[] = [{id:"001-beetroot.svg", name: "test1", price: 5},{id:"002-carrot.svg", name: "test2", price: 2}]
   capitalizeFirstLetter = capitalizeFirstLetter
 
