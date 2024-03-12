@@ -1,0 +1,31 @@
+.items-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+    
+}
+
+.item-list-container {
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    column-gap: minmax(20px, 5%);
+    row-gap: 50px;
+}
+
+.store-item {
+    list-style: none;
+    width: 100%;
+    height: auto;
+    justify-items: center;
+    align-items: center;
+}
+
+.item-image {
+    width: 140px;
+    height: 140px;
+}
+
+.store-item > h3 {
+    margin-top: 0px;
+}
