@@ -9,18 +9,15 @@ import { ItemPickingService } from 'src/app/item-picking.service';
   templateUrl: './items.component.html',
   styleUrls: ['./items.component.css']
 })
-export class ItemsComponent implements OnInit {
+export class ItemsComponent {
   items: Item[] = [{id:"001-beetroot.svg", name: "test1", price: 5},{id:"002-carrot.svg", name: "test2", price: 2}]
   capitalizeFirstLetter = capitalizeFirstLetter
 
-  constructor(private DatafetchingService: DatafetchingService, private itemPicker: ItemPickingService) {}
-
-  ngOnInit(): void {
-    this.DatafetchingService.getData().subscribe(
-      (res: any) => {this.items = res;}, (error: any) => {
-        console.error("Error retrieving data:", error)
-      }
-    )
+  constructor(private DatafetchingService: DatafetchingService, private itemPicker: ItemPickingService) {
+    this.DatafetchingService.fetchData();
+    this.DatafetchingService.items.subscribe((groceryItems) => {
+      this.items = [...groceryItems]
+    })
   }
 
   addItemToCart(item: Item): void {

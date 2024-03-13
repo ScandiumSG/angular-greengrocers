@@ -1,0 +1,34 @@
+<p>Show items: </p>
+<form>
+    <label for="all">
+        <input
+            name="query-type-filter"
+            id="all"
+            type="radio"
+            value="all"
+            [defaultChecked]="true"
+            (click)="filter('all')"
+        >
+        All
+    </label>
+    <label for="vegetable">
+        <input
+            name="query-type-filter"
+            id="vegetable"
+            type="radio"
+            value="vegetable"
+            (click)="filter('vegetable')"
+        >
+        Vegetables
+    </label>
+    <label for="fruit">
+        <input
+            name="query-type-filter"
+            id="fruit"
+            type="radio"
+            value="fruit"
+            (click)="filter('fruit')"
+        >
+        Fruit
+    </label>
+</form>
