@@ -19,7 +19,6 @@ export class CartServiceService {
       if (item.id === "") {return;}
 
       const itemExistsInCart = this.cartItems.value.filter((i) => i.name === item.name)[0]
-
       if (itemExistsInCart) {
         this.incrementQuantity(itemExistsInCart)
       } else {

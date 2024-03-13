@@ -5,7 +5,7 @@ import { ItemlistComponent } from './item-list/itemlist.component';
 
 const routes: Routes = [
   { path: '', component: ItemlistComponent},
-  { path: 'cart', component: CartComponent}
+  { path: 'checkout', component: CartComponent}
 
 ]
 
