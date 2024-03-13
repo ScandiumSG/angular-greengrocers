@@ -7,8 +7,10 @@ import { CartServiceService } from '../cart-service.service';
   styleUrls: ['./total-price.component.css']
 })
 export class TotalPriceComponent {
-  constructor(private cartService: CartServiceService) {}
-  price: number = this.cartService.getCartPrice();
+  totalCost: number = 0;
 
+  constructor(private cartService: CartServiceService) {
+    this.cartService.totalCost.subscribe((cost) => {this.totalCost = cost})
+  }
 
 }

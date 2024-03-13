@@ -1,11 +1,11 @@
 
-<div [class.items-container]="true">
-    <ul [class.item-list-container]="true">
-        <li [class.store-item]="true" *ngFor="let item of items">
+<div class="items-container">
+    <ul class="item-list-container">
+        <li class="store-item" *ngFor="let item of items">
             <img [class.item-image]="true" [src]="'/assets/icons/' + item.id + '.svg'" />
             <h3>{{ capitalizeFirstLetter(item.name) }}</h3>
             <span>£{{ item.price.toFixed(2) }}</span><br/>
-            <button>Add to cart</button>
+            <button (click)="addItemToCart(item)">Add to cart</button>
         </li>
     </ul>
 </div>
