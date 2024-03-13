@@ -1,4 +1,7 @@
-<div class="cart--item-list-container">
+<main id="cart">
+  <h2>Your Cart</h2>
+  <button id="back-to-store-button" (click)="navigateToStore()">Continue shopping</button>
+  <div class="cart--item-list-container">
     <ul class="item-list cart--item-list">
       <li *ngFor="let item of cartInventory">
         <img
@@ -6,11 +9,12 @@
           [src]="'/assets/icons/' + item.id + '.svg'"
           alt="beetroot"
         />
-        <p>{{ item.name }}</p>
+        <p>{{ capitalizeName(item.name) }}</p>
         <button class="quantity-btn remove-btn center" (click)="decrement(item)">-</button>
         <span class="quantity-text center">{{ item.quantity }}</span>
         <button class="quantity-btn add-btn center" (click)="increment(item)">+</button>
       </li>
     </ul>
   </div>
-  
+  <app-total-price />
+</main>

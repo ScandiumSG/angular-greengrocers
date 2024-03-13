@@ -4,11 +4,10 @@ import { TotalPriceComponent } from './total-price/total-price.component';
 import { CartComponent } from './cart/cart.component';
 
 
-
 @NgModule({
   declarations: [
     TotalPriceComponent,
-    CartComponent
+    CartComponent,
   ],
   imports: [
     CommonModule
