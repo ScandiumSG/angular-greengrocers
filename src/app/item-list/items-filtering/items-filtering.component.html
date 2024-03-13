@@ -1,34 +1,46 @@
-<p>Show items: </p>
-<form>
-    <label for="all">
-        <input
-            name="query-type-filter"
-            id="all"
-            type="radio"
-            value="all"
-            [defaultChecked]="true"
-            (click)="filter('all')"
-        >
-        All
-    </label>
-    <label for="vegetable">
-        <input
-            name="query-type-filter"
-            id="vegetable"
-            type="radio"
-            value="vegetable"
-            (click)="filter('vegetable')"
-        >
-        Vegetables
-    </label>
-    <label for="fruit">
-        <input
-            name="query-type-filter"
-            id="fruit"
-            type="radio"
-            value="fruit"
-            (click)="filter('fruit')"
-        >
-        Fruit
-    </label>
-</form>
+<div class="options-container">
+    <div class="filter-query-container">
+        <p>Show items: </p>
+        <form>
+        <label for="all">
+            <input
+                name="query-type-filter"
+                id="all"
+                type="radio"
+                value="all"
+                [defaultChecked]="true"
+                (click)="filter('all')"
+            >
+            All
+        </label>
+        <label for="vegetable">
+            <input
+                name="query-type-filter"
+                id="vegetable"
+                type="radio"
+                value="vegetable"
+                (click)="filter('vegetable')"
+            >
+            Vegetables
+        </label>
+        <label for="fruit">
+            <input
+                name="query-type-filter"
+                id="fruit"
+                type="radio"
+                value="fruit"
+                (click)="filter('fruit')"
+                >
+                Fruit
+            </label>
+        </form>
+    </div>
+    <div class="sort-button-container">
+        <p>Sort by:</p>
+        <button (click)="sort('name')">Name (ASC)</button>
+        <button (click)="sort('price')">Price (ASC)</button>
+        <br/>
+        <button (click)="sort('name', false)">Name (DESC)</button>
+        <button (click)="sort('price', false)">Price (DESC)</button>
+    </div>
+</div>

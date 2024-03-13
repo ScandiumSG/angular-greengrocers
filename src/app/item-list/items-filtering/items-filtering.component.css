@@ -1,0 +1,6 @@
+.options-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 250px;
+}

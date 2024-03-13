@@ -7,9 +7,16 @@ import { DatafetchingService } from '../datafetching.service';
   styleUrls: ['./items-filtering.component.css']
 })
 export class ItemsFilteringComponent {
+
   constructor(private fetchingService: DatafetchingService) {}
+
+  sort(value: string, bool: boolean = true) {
+    this.fetchingService.setSort(value, bool);
+    this.fetchingService.fetchData();
+  }
+
   filter(value: string) {
     this.fetchingService.setFilter(value);
-    this.fetchingService.fetchData()
+    this.fetchingService.fetchData();
   }
 }

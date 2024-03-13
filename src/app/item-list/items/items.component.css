@@ -3,12 +3,12 @@
     width: 100%;
     justify-content: center;
     align-content: center;
-    
+    min-width: calc(250px + 200px + 50px + 20px);
 }
 
 .item-list-container {
     display: grid;
-    grid-template-columns: repeat(3, 200px);
+    grid-template-columns: repeat(4, 200px);
     column-gap: minmax(20px, 5%);
     row-gap: 50px;
 }
@@ -28,4 +28,23 @@
 
 .store-item > h3 {
     margin-top: 0px;
+}
+
+@media only screen and (max-width: 1100px) {
+    .item-list-container {
+        grid-template-columns: repeat(3, 200px)
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .item-list-container {
+        grid-template-columns: repeat(2, 200px)
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .item-list-container {
+        grid-template-columns: repeat(1, 200px);
+        column-gap: 0;
+    }
 }

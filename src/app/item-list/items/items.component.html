@@ -1,5 +1,5 @@
-
 <div class="items-container">
+    <app-items-filtering/>
     <ul class="item-list-container">
         <li class="store-item" *ngFor="let item of items">
             <img [class.item-image]="true" [src]="'/assets/icons/' + item.id + '.svg'" />
